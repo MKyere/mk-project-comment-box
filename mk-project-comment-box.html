@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Comment Box</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/css-comment-box.css" />
+
+</style>
+</head> 
+<body>
+
+<div class="flex-container">
+    <!-- first row -->
+      <form name="projectform" onsubmit="event.preventDefault(); return validateForm()">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" name="email" placeholder="Your email..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Comments</label>
+        </div>
+        <div class="col-75">
+          <textarea id="comments" onkeypress="countText()" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <p>character count:<span id="textcount"></span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-75" id="yourcomments">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+    <!-- end of first row  -->
+</div>
+
+</div>
+
+  <footer>
+    <p>Portions of this content are ©2022</p>
+  </footer>
+  <script type="text/javascript" src="js/sript-comment-box.js"></script>
+</body>
+</html>
+
+
+
